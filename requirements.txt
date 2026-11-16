@@ -1,0 +1,27 @@
+# Python 3.11/3.12 requirements for Indian Electricity Demand Forecasting
+# Note: PyTorch can be installed via CPU wheel index:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+
+# --- Core Scientific Stack ---
+numpy>=1.26.4
+pandas==2.2.3            # Pinned: stable binary with verified Windows Application Control compatibility
+scipy>=1.13.0
+scikit-learn>=1.4.0
+
+# --- Data Ingestion & Storage ---
+openpyxl>=3.1.2          # Streaming parser for Mendeley Excel workbooks
+pyarrow==17.0.0          # Pinned: verified Windows Application Control compatibility
+
+# --- Forecasting Models ---
+lightgbm>=4.3.0          # Gradient-boosted trees for direct multi-horizon forecasting
+torch>=2.2.0             # Deep learning backend for TimesFM (CPU inference)
+timesfm==2.0.2           # Google TimesFM 2.5 (200M) zero-shot foundation model
+holidays>=0.40           # Indian calendar holidays (holidays.India)
+
+# --- Visualization & Dashboard ---
+plotly>=5.20.0           # Interactive decile fan charts and error curves
+streamlit>=1.35.0        # Interactive web application for model exploration
+
+# --- Testing & Quality Assurance ---
+pytest>=8.0.0            # Consolidated verification test suite
